@@ -2,70 +2,65 @@
 	export let data;
 </script>
 
-<h1>Collected Fictions</h1>
-<main>
-	{#each data.posts as post (post.slug)}
-		<div class="post">
-			<a href={`/posts/${post.slug}`}>
-				<h2>
-					{post.title}
-				</h2>
-				<p class="post-synopsis">{post.synopsis}</p>
+<svelte:head>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif+Balinese&family=Nunito+Sans:opsz@6..12&family=Urbanist:wght@700&display=swap"
+		rel="stylesheet"
+	/>
+</svelte:head>
+
+<div class="container">
+	<h1>Collected Fictions</h1>
+
+	<ul class="links">
+		{#each data.posts as post}
+			<div class="post">
+				<a href={`blog/${post.slug}`}>{post.title}</a>
 				<p class="post-date">{post.date}</p>
-			</a>
-		</div>
-	{/each}
-</main>
+			</div>
+		{/each}
+	</ul>
+</div>
 
 <style>
-	:global(body) {
-		background-color: rgb(246, 245, 241);
-	}
-
-	main {
-		padding-left: 2rem;
-	}
-
 	h1 {
-		font-size: 2.5rem;
-		text-decoration: underline;
+		font-family: 'Urbanist', sans-serif;
+		font-size: 3rem;
 		margin-left: 1rem;
+		margin-bottom: 1.2rem;
+	}
+
+	h1:hover,
+	.post-date:hover {
 		cursor: default;
 	}
 
-	h2 {
-		font-size: 1.5rem;
+	a,
+	.post-date {
+		font-size: 1.1rem;
 	}
 
 	a {
-		text-decoration: none;
+		font-family: 'Noto Serif Balinese', serif;
 		color: black;
 	}
 
-	.post a {
+	a:hover {
+		color: grey;
+	}
+
+	.post {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		border: 1px solid black;
-		padding-left: 1rem;
-		padding-right: 1rem;
+		padding: 1em;
 		max-width: 90%;
-		border-radius: 2px;
-	}
-
-	.post a:hover {
-		background-color: rgb(255, 242, 242);
-		border: 1px solid rgb(106, 106, 106);
-		cursor: pointer;
-	}
-
-	.post-synopsis {
-		font-style: italic;
-		margin-right: 25%;
 	}
 
 	.post-date {
-		font-weight: bold;
-		font-size: 1.2rem;
+		font-style: italic;
 	}
 </style>

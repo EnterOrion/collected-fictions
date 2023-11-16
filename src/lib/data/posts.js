@@ -55,3 +55,12 @@ export const posts = [
 		date: '11/5/23'
 	}
 ];
+
+/*[
+	{
+		title: 'First post',
+		description: 'First post.',
+		date: '11/11/23',
+		slug: 'first-post'
+	}
+];*/
