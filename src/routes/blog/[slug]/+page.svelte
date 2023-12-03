@@ -35,7 +35,7 @@
 	}
 
 	.post-body {
-		max-width: 85%;
+		max-width: 60%;
 		margin: 0 auto;
 	}
 </style>

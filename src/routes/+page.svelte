@@ -14,14 +14,14 @@
 <div class="container">
 	<h1>Collected Fictions</h1>
 
-	<ul class="links">
+	<div class="post-container">
 		{#each data.posts as post}
 			<div class="post">
 				<a href={`blog/${post.slug}`}>{post.title}</a>
 				<p class="post-date">{post.date}</p>
 			</div>
 		{/each}
-	</ul>
+	</div>
 </div>
 
 <style>
@@ -57,10 +57,16 @@
 		align-items: center;
 		border: 1px solid black;
 		padding: 1em;
-		max-width: 90%;
+		max-width: 95%;
+		margin-bottom: 1.5rem;
 	}
 
 	.post-date {
 		font-style: italic;
+	}
+
+	.post-container {
+		margin-top: 1.2rem;
+		padding-left: 5%;
 	}
 </style>
