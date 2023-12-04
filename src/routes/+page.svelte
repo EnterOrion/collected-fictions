@@ -1,5 +1,6 @@
 <script>
 	export let data;
+	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -14,13 +15,13 @@
 <div class="container">
 	<div class="header-container">
 		<h1>Collected Fictions</h1>
-		<h2><a href="about">About</a></h2>
+		<h2><a href="{base}/about">About</a></h2>
 	</div>
 
 	<div class="post-container">
 		{#each data.posts as post}
 			<div class="post">
-				<a href={`blog/${post.slug}`}>{post.title}</a>
+				<a href={`${base}/blog/${post.slug}`}>{post.title}</a>
 				<p class="post-date">Published: {post.date}</p>
 			</div>
 		{/each}
