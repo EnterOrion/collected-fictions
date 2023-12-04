@@ -32,6 +32,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 80rem;
 	}
 	h1 {
 		font-family: 'Roboto Mono', monospace;
@@ -87,7 +88,7 @@
 		align-items: center;
 		border: 1px solid black;
 		padding: 1em;
-		max-width: 95%;
+		width: clamp(5rem, 95%, 80rem);
 		margin-bottom: 1.5rem;
 	}
 
@@ -98,5 +99,36 @@
 	.post-container {
 		margin-top: 1.2rem;
 		padding-left: 3%;
+	}
+
+	@media (min-width: 1400px) {
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.header-container {
+			min-width: 60rem;
+		}
+		.post-container {
+			min-width: 60rem;
+		}
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 1.2rem;
+		}
+		h2 {
+			font-size: 1rem;
+		}
+		.post {
+			flex-direction: column;
+		}
+
+		.post {
+			width: 90%;
+		}
 	}
 </style>

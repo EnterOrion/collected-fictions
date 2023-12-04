@@ -24,4 +24,21 @@
 		font-family: 'Noto Serif Balinese', serif;
 		margin-left: 3%;
 	}
+
+	@media (min-width: 1400px) {
+		p {
+			margin-left: 0rem;
+		}
+		h1,
+		p {
+			min-width: 100%;
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 1.4rem;
+		}
+	}
 </style>

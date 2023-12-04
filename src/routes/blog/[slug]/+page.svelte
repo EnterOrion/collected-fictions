@@ -35,7 +35,19 @@
 	}
 
 	.post-body {
-		max-width: 60%;
+		width: clamp(23rem, 60%, 65rem);
 		margin: 0 auto;
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 1.8rem;
+		}
+	}
+
+	@media (max-width: 350px) {
+		.post-body {
+			max-width: 17rem;
+		}
 	}
 </style>
