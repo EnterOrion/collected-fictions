@@ -35,7 +35,7 @@
 	}
 
 	.post-body {
-		width: clamp(23rem, 60%, 65rem);
+		width: clamp(23rem, 60%, 50rem);
 		margin: 0 auto;
 	}
 
@@ -45,9 +45,9 @@
 		}
 	}
 
-	@media (max-width: 350px) {
+	@media (max-width: 400px) {
 		.post-body {
-			max-width: 17rem;
+			max-width: 18rem;
 		}
 	}
 </style>

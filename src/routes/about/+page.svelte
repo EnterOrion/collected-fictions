@@ -8,7 +8,12 @@
 </svelte:head>
 
 <h1>About</h1>
-<p>There's a thousand stories within me and I plan to write them all.</p>
+<p>I miss when I was younger and I could daydream for hours.</p>
+<p>
+	I remember now: fiction is greater than reality. I will continue to build this library and
+	discover new worlds.
+</p>
+<p>Thank you for reading. I hope you enjoy your time here.</p>
 
 <style>
 	h1 {
