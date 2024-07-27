@@ -10,14 +10,10 @@ export const posts = [
 		slug: 'another-saturday-night',
 		title: 'Another Saturday Night',
 		date: '12/3/23'
+	},
+	{
+		slug: 'just-one-more',
+		title: 'Just one more...',
+		date: '7/27/24'
 	}
 ];
-
-/*[
-	{
-		title: 'First post',
-		description: 'First post.',
-		date: '11/11/23',
-		slug: 'first-post'
-	}
-];*/
